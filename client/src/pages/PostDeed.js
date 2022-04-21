@@ -20,7 +20,7 @@ import React from 'react';
             />
           </div>
           <div className="post-body">
-            <label> Share the Story:</label>
+            <label> Share the Story :</label>
             <textarea
               placeholder="Post..."
               // onChange={(event) => {

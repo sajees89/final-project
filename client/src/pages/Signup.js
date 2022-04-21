@@ -55,7 +55,7 @@ function Signup() {
           />
         
 
-        <button>Sign Up</button>
+        <button onClick={Signup}>Sign Up</button>
         
     </form>
     </div>
