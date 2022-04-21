@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className='home-title'>Home
       <div className='home-title-wrapper'>
-        <h1 className='glow'>Good Deeds</h1>
+        <h1 className='glow'>UFT</h1>
         <p>Every Little Good Deed Counts</p>
       </div>
       <main>
