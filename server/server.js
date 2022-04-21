@@ -1,9 +1,12 @@
 const path = require('path');
+const colors = require('colors');
+const dotenv = require('dotenv');
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 
 const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
+dotenv.config({path:'./config/config.env'});
 const db = require('./config/connection');
 
 
@@ -46,6 +49,6 @@ app.use(express.json());
 
 db.once('open', () => {
   app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
+    console.log(`API server running on port ${PORT}!`.bgCyan);
   });
 });
