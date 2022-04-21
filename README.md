@@ -1,4 +1,4 @@
-# read-n-seek
+# Project 3
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ Completed
 
 ## Description
 
-A MERN stack social media application converting a RESTful API to a GraphQL API built with an Apollo Server. The Application is a book search engine where users can login, search books, save books, review all books in their user database and delete books.
+A MERN SPA application to promote social good amongst students of high school age.
 
 ## Installation
 
@@ -51,15 +51,14 @@ To run tests, get the source code at git clone [Github](goes here) and install d
 
 ## GitHub Link
 
-[GitHub: Goes Here](https://github.com/goes here)
+[GitHub: UofT Project 3](https://github.com/sajees89/final-project)
 
 ## Deployment Link
 
-[Heroku](https://infinite-basin-51401.herokuapp.com/)
+[Heroku](https://site-name.herokuapp.com/)
 
 ## Additional Information
 
 - Date: April 19, 2022
 - Author: Saj Jeya, Irene Hipolito, Abirami Theephan, Constance Mitchell
-- Email: [info@constance.design](mailto:user@example.com)
 - Acknowledgements: Many thanks always to UofT Coding Bootcamp
