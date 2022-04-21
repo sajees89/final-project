@@ -25,35 +25,35 @@ function Signup() {
     className="signup-form">
         <h3>Sign Up Here</h3>
 
-        <label for="firstname">First Name
+        <label for="firstname">First Name </label>
         <input type="text" value={inputs.firstname || ""}
             onChange={handleChange}
           />
-          </label>
+         
 
-          <label for="lastname">Last Name
+          <label for="lastname">Last Name</label>
         <input type="text" value={inputs.lastname || ""}
             onChange={handleChange}
           />
-          </label>
+          
 
-        <label for="username">Username
+        <label for="username">Username</label>
         <input type="text" value={inputs.name || ""}
             onChange={handleChange}
           />
-          </label>
+          
 
-          <label for="email">Email
+          <label for="email">Email</label>
         <input type="email" value={inputs.email || ""}
             onChange={handleChange}
           />
-          </label>
+          
 
-        <label for="password">Password
+        <label for="password">Password</label>
         <input type="password" value={inputs.password || ""}
             onChange={handleChange}
           />
-        </label>
+        
 
         <button>Sign Up</button>
         

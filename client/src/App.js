@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-import Singlepost from './pages/Singlepost';
+import PostDeed from './pages/PostDeed';
 import Nomatch from './pages/Nomatch';
 import Footer from './components/Footer';
 
@@ -16,8 +16,9 @@ function App() {
       <Router>
       <nav>
         <Link to="/"> Home </Link>
-        <Link to="/Login">Login</Link>
-        <Link to="/Signup">Sign Up</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Sign Up</Link>
+        <Link to="/postdeed">Post Deed</Link>
       </nav>
      
       <Routes>
@@ -25,7 +26,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Profile" element={<Profile />} />
-        <Route path="/Singlepost" element={<Singlepost />} />
+        <Route path="/PostDeed" element={<PostDeed />} />
         <Route path="*" element={<Nomatch />} />
       </Routes>
       <Footer/>

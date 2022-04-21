@@ -25,17 +25,17 @@ function Login() {
     className="login-form">
         <h3>Login Here</h3>
 
-        <label for="username">Username
+        <label for="username">Username</label>
         <input type="text" value={inputs.name || ""}
             onChange={handleChange}
           />
-          </label>
+          
 
-        <label for="password">Password
+        <label for="password">Password</label>
         <input type="password" value={inputs.password || ""}
             onChange={handleChange}
           />
-        </label>
+        
 
         <button>Log In</button>
         

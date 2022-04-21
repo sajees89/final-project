@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Footer() {
+const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+      &#169; Abi, Constance, Irene, Sajees
+    </div>
   )
 }
 
