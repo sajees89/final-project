@@ -25,35 +25,36 @@ function Signup() {
     className="signup-form">
         <h3>Sign Up Here</h3>
 
-        <label for="firstname">First Name </label>
-        <input type="text" value={inputs.firstname || ""}
-            onChange={handleChange}
-          />
-         
-
-          <label for="lastname">Last Name</label>
-        <input type="text" value={inputs.lastname || ""}
-            onChange={handleChange}
-          />
-          
-
-        <label for="username">Username</label>
-        <input type="text" value={inputs.name || ""}
-            onChange={handleChange}
-          />
-          
-
-          <label for="email">Email</label>
-        <input type="email" value={inputs.email || ""}
-            onChange={handleChange}
-          />
-          
-
-        <label for="password">Password</label>
-        <input type="password" value={inputs.password || ""}
-            onChange={handleChange}
-          />
-        
+        <h4>Username</h4>
+        <input
+                className="form-input"
+                placeholder="Your username"
+                name="username"
+                type="username"
+                id="username"
+                value={inputs.username}
+                onChange={handleChange}
+              />
+              <h4>Email</h4>
+              <input
+                className="form-input"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                id="email"
+                value={inputs.email}
+                onChange={handleChange}
+              />
+              <h4>Password</h4>
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                id="password"
+                value={inputs.password}
+                onChange={handleChange}
+              />
 
         <button onClick={Signup}>Sign Up</button>
         

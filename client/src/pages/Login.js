@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 
-
+/// update to include Auth n backserver 
 function Login() {
   const [inputs, setInputs] = useState({});
 
@@ -23,18 +23,28 @@ function Login() {
     </div>
     <form onSubmit={handleSubmit}
     className="login-form">
-        <h3>Login Here</h3>
-
-        <label for="username">Username</label>
-        <input type="text" value={inputs.name || ""}
-            onChange={handleChange}
-          />
+        <h3>Login</h3>
+        <h4>Username</h4>
+        <input
+                className="form-input"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                id="email"
+                value={inputs.email}
+                onChange={handleChange}
+              />
           
-
-        <label for="password">Password</label>
-        <input type="password" value={inputs.password || ""}
-            onChange={handleChange}
-          />
+          <h4>Password</h4>
+          <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                id="password"
+                value={inputs.password}
+                onChange={handleChange}
+              />
         
 
         <button>Log In</button>
