@@ -10,17 +10,9 @@ import React from 'react';
       <div className="create-post">
         <div className="post-container">
           <h1>Post A Good Deed</h1>
-          <div className="post-title">
-            <label> Title:</label>
-            <input
-              placeholder="Title..."
-              // onChange={(event) => {
-              //   setTitle(event.target.value);
-              // }}
-            />
-          </div>
+         
           <div className="post-body">
-            <label> Share the Story :</label>
+            <label> Share Your Story :</label>
             <textarea
               placeholder="Post..."
               // onChange={(event) => {
