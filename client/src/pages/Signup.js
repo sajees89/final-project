@@ -1,19 +1,39 @@
 import React from 'react'
 import { useState } from "react";
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
 
+import Auth from '../utils/auth';
 
-function Signup() {
-  const [inputs, setInputs] = useState({});
+const Signup = () => {
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+  const [addUser, { error }] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    alert(inputs);
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
   };
   return (
     <div>
@@ -32,7 +52,7 @@ function Signup() {
                 name="username"
                 type="username"
                 id="username"
-                value={inputs.username}
+                value={formState.username}
                 onChange={handleChange}
               />
               <h4>Email</h4>
@@ -42,7 +62,7 @@ function Signup() {
                 name="email"
                 type="email"
                 id="email"
-                value={inputs.email}
+                value={formState.email}
                 onChange={handleChange}
               />
               <h4>Password</h4>
@@ -52,13 +72,14 @@ function Signup() {
                 name="password"
                 type="password"
                 id="password"
-                value={inputs.password}
+                value={formState.password}
                 onChange={handleChange}
               />
 
         <button onClick={Signup}>Sign Up</button>
         
     </form>
+    {error && <div>Signup failed</div>}
     </div>
   )
 }

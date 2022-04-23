@@ -1,40 +1,62 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Profile from './pages/Profile';
-import PostDeed from './pages/PostDeed';
-import Nomatch from './pages/Nomatch';
-import Footer from './components/Footer';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
+import PostDeed from "./pages/PostDeed";
+import Nomatch from "./pages/Nomatch";
+import Footer from "./components/Footer";
+
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-<>
-      
+    <ApolloProvider client={client}>
       <Router>
-      <nav>
-        <Link to="/"> Home </Link>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign Up</Link>
-        <Link to="/postdeed">Post Deed</Link>
-      </nav>
-     
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Signup" element={<Signup />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/PostDeed" element={<PostDeed />} />
-        <Route path="*" element={<Nomatch />} />
-      </Routes>
-      <Footer/>
-      </Router>
-   
-        
-      </>
+        <nav>
+          <Link to="/"> Home </Link>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
+          <Link to="/postdeed">Post Deed</Link>
+        </nav>
 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/postdeed" element={<PostDeed />} />
+          <Route path="*" element={<Nomatch />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ApolloProvider>
   );
 }
 
