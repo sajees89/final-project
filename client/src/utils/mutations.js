@@ -7,6 +7,7 @@ export const LOGIN_USER = gql`
       user {
         _id
         username
+        password
       }
     }
   }
@@ -32,33 +33,14 @@ export const ADD_POST = gql`
       _id
       postText
       username
-<<<<<<< HEAD
-=======
       commentCount
       comments {
         _id
       }
->>>>>>> f4051a0a50d951db5eff63459bb8e5e99870823a
     }
   }
 `;
 
-<<<<<<< HEAD
-// export const ADD_REACTION = gql`
-//   mutation addReaction($postId: ID!, $reactionBody: String!) {
-//     addReaction(postId: $postId, reactionBody: $reactionBody) {
-//       _id
-//       reactionCount
-//       reactions {
-//         _id
-//         reactionBody
-//         createdAt
-//         username
-//       }
-//     }
-//   }
-// `;
-=======
 export const ADD_comment = gql`
   mutation addComment($postId: ID!, $commentBody: String!) {
     addComment(postId: $postId, commentBody: $commentBody) {
@@ -73,4 +55,3 @@ export const ADD_comment = gql`
     }
   }
 `;
->>>>>>> f4051a0a50d951db5eff63459bb8e5e99870823a
