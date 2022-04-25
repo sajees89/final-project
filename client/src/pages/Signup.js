@@ -15,33 +15,36 @@ const Signup = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
+    setFormState({...formState, [name]: value });
   };
 
-  const handleSubmit = async (event) => {
+  const handleFormSubmit = async event => {
     event.preventDefault();
+    
+      try {
+        const { data } = await addUser({
+          variables: { ...formState }
+        });
 
-    try {
-      const { data } = await addUser({
-        variables: { ...formState },
-      });
+        if (error) {
+          throw new Error("something went wrong!");
+        }
+  
+        console.log(data.user);
+        Auth.login(data.addUser.token);
+      } catch (err) {
+        console.error(err);
+      }
 
-      Auth.login(data.addUser.token);
-    } catch (e) {
-      console.error(e);
-    }
-  };
+    };
+
   return (
     <div>
     <div className="background">
         <div className="shape"></div>
         <div className="shape"></div>
     </div>
-    <form onSubmit={handleSubmit}
+    <form onSubmit={handleFormSubmit}
     className="signup-form">
         <h3>Sign Up Here</h3>
 
