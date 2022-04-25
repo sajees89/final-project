@@ -1,9 +1,10 @@
 import React from "react";
+import '../index.css';
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { ADD_COMMENT } from "../../utils/mutations";
+import { ADD_COMMENT } from "../utils/mutations";
 
-const CommentForm = ({ postId }) => {
+const Commentform = ({ postId }) => {
   const [commentBody, setBody] = useState("");
   const [addComment, { error }] = useMutation(ADD_COMMENT);
 
@@ -52,4 +53,4 @@ const CommentForm = ({ postId }) => {
   );
 };
 
-export default CommentForm;
+export default Commentform;

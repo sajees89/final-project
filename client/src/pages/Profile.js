@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-
-import PostDeed from '../components/PostDeed';
+import '../index.css';
+import Postform from '../components/Postform';
 import Postlist from '../components/Postlist';
 
 
@@ -12,7 +12,6 @@ import Auth from '../utils/auth';
 
 const Profile = (props) => {
   const { username: userParam } = useParams();
-
   
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
@@ -60,7 +59,7 @@ const Profile = (props) => {
 
         
       </div>
-      <div className="mb-3">{!userParam && <PostDeed />}</div>
+      <div className="mb-3">{!userParam && <Postform />}</div>
     </div>
   );
 };

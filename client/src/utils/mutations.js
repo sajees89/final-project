@@ -41,7 +41,7 @@ export const ADD_POST = gql`
   }
 `;
 
-export const ADD_comment = gql`
+export const ADD_COMMENT = gql`
   mutation addComment($postId: ID!, $commentBody: String!) {
     addComment(postId: $postId, commentBody: $commentBody) {
       _id

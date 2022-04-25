@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+import '../index.css';
 
 import Auth from '../utils/auth';
 

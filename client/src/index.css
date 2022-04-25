@@ -115,7 +115,7 @@ button{
   height: 500px;
 }
 
-nav {
+.nav {
   overflow: hidden;
   backdrop-filter: blur(10px);
   background-color: #84c5f0;
@@ -127,7 +127,7 @@ nav {
   box-shadow: 0 0 50px rgba(80, 172, 73, 0.6);
   
 }
-nav a {
+.nav a {
   float: right;
   display: block;
   color: black;

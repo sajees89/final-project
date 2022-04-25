@@ -1,10 +1,11 @@
 import React from 'react';
+import '../index.css';
 import { useState} from "react";
 import { useMutation } from '@apollo/client';
 import { ADD_POST} from '../utils/mutations';
 import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
 
-  const PostDeed = () => {
+  const Postform = () => {
     const [postText, setText] = useState('');
       const [addPost, { error }] = useMutation(ADD_POST, {
         update(cache, { data: { addPost } }) {
@@ -77,4 +78,4 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
   }
   
 
-export default PostDeed;
+export default Postform;
