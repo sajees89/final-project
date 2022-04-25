@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 
-import PostDeed from '../pages/PostDeed';
+import PostDeed from '../components/PostDeed';
 import Postlist from '../components/Postlist';
 
 

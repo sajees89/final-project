@@ -12,7 +12,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
-import PostDeed from "./pages/PostDeed";
+import PostDeed from "./components/PostDeed";
 import Nomatch from "./pages/Nomatch";
 import Footer from "./components/Footer";
 
@@ -43,7 +43,7 @@ function App() {
           <Link to="/"> Home </Link>
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
-          <Link to="/postdeed">Post Deed</Link>
+          
         </nav>
 
         <Routes>
