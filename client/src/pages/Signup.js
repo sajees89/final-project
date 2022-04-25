@@ -79,7 +79,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
 
-        <button onClick={Signup}>Sign Up</button>
+        <button className='btn' type='submit'>Sign Up</button>
         
     </form>
     {error && <div>Signup failed</div>}
@@ -87,4 +87,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Signup;

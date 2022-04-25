@@ -49,11 +49,11 @@ const Login = (props) => {
         <h4>Username</h4>
         <input
                 className="form-input"
-                placeholder="Your email"
-                name="email"
-                type="email"
-                id="email"
-                value={formState.email}
+                placeholder="Your username"
+                name="username"
+                type="username"
+                id="username"
+                value={formState.username}
                 onChange={handleChange}
               />
           
@@ -69,7 +69,7 @@ const Login = (props) => {
               />
         
 
-        <button>Log In</button>
+        <button className='btn' type='submit'>Log In</button>
         
         {error && <div>Login failed</div>}
     </form>

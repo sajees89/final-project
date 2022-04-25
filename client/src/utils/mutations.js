@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 export const LOGIN_USER = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
+  mutation login($username: String!, $password: String!) {
+    login(username: $username, password: $password) {
       token
       user {
         _id
@@ -32,10 +32,18 @@ export const ADD_POST = gql`
       _id
       postText
       username
+<<<<<<< HEAD
+=======
+      commentCount
+      comments {
+        _id
+      }
+>>>>>>> f4051a0a50d951db5eff63459bb8e5e99870823a
     }
   }
 `;
 
+<<<<<<< HEAD
 // export const ADD_REACTION = gql`
 //   mutation addReaction($postId: ID!, $reactionBody: String!) {
 //     addReaction(postId: $postId, reactionBody: $reactionBody) {
@@ -50,3 +58,19 @@ export const ADD_POST = gql`
 //     }
 //   }
 // `;
+=======
+export const ADD_comment = gql`
+  mutation addComment($postId: ID!, $commentBody: String!) {
+    addComment(postId: $postId, commentBody: $commentBody) {
+      _id
+      commentCount
+      comments {
+        _id
+        commentBody
+        createdAt
+        username
+      }
+    }
+  }
+`;
+>>>>>>> f4051a0a50d951db5eff63459bb8e5e99870823a
