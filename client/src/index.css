@@ -172,7 +172,9 @@ button{
     display: flex;
     flex-direction: column;
   }
-  
+  .post-form {
+    width: 500px;
+  }
   .post-body input,
   .post-body textarea {
     font-size: 18px;
