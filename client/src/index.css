@@ -239,6 +239,9 @@ form input {
       color: #806914;
     }
   }
+  .p-listing {
+    color: white
+  }
 
 /* FooterPage */
 .footer {
