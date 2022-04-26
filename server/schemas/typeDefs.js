@@ -14,8 +14,9 @@ type User {
 
 type Post {
   _id: ID
-  postText: String
-  username: String
+  postText: String!
+  username: String!
+  createdAt: String!
 }
 
 type Auth {

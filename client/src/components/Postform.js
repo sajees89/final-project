@@ -7,7 +7,9 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
 
   const Postform = () => {
     const [postText, setText] = useState('');
-      const [addPost, { error }] = useMutation(ADD_POST, {
+    const [characterCount, setCharacterCount] = useState(0);
+
+    const [addPost, { error }] = useMutation(ADD_POST, {
         update(cache, { data: { addPost } }) {
           try {
             // update post array's cache
@@ -30,8 +32,10 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
         },
       });
       const handleChange = (event) => {
-        const { name, value } = event.target.value;
-        setText({...postText, [name]: value });
+        if (event.target.value.length <= 280) {
+          setText(event.target.value);
+          setCharacterCount(event.target.value.length);
+        }
       };
     
      // submit form
@@ -45,7 +49,7 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
 
       // clear form value
       setText('');
-      
+      setCharacterCount(0);
     } catch (e) {
       console.error(e);
     }
@@ -54,18 +58,24 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
     return (
       
       <div className="create-post">
+      
         <div className="post-container">
-          <h1>Post A Good Deed</h1>
+          
           <div className="post-body">
+          <p
+        className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
+      >
+        Character Count: {characterCount}/280
+        {error && <span className="ml-2">Something went wrong...</span>}
+      </p>
           <form className="post-form" 
           onSubmit={handleSubmit}>
-            <h5> Share Your Story :</h5>
+            <h4> Share Your Story :</h4>
             <textarea
               placeholder="Share your story"
-              name="post"
-              type="post"
-              id="post"
-              value={postText.post}
+              className="form-input"
+      
+              value={postText}
               onChange={handleChange}
             ></textarea>
          

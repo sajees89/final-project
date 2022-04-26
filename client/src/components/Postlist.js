@@ -8,7 +8,7 @@ const Postlist = ({ posts }) => {
   }
 
   return (
-    <div>
+    <div className="p-listing">
       {posts &&
         posts.map((post) => (
           <div key={post._id} className="card">

@@ -7,13 +7,7 @@ export const QUERY_POSTS = gql`
       postText
       createdAt
       username
-      commentCount
-      comments {
-        _id
-        createdAt
-        username
-        commentBody
-      }
+    
     }
   }
 `;

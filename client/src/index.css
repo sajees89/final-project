@@ -146,6 +146,9 @@ button{
 .create-post textarea {
   color: black
 }
+.create-post p {
+  color: black
+}
   
 .post-container {
     width: 500px;

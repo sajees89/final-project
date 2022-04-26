@@ -29,14 +29,14 @@ export const ADD_USER = gql`
 
 export const ADD_POST = gql`
   mutation addPost($postText: String!) {
-    addRecipe(postText: $postText) {
+    addPost(postText: $postText) {
       _id
       postText
       username
       commentCount
-      comments {
-        _id
-      }
+       comments {
+         _id
+       }
     }
   }
 `;
