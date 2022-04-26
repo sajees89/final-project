@@ -30,7 +30,7 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
         },
       });
       const handleChange = (event) => {
-        const { name, value } = event.target;
+        const { name, value } = event.target.value;
         setText({...postText, [name]: value });
       };
     
@@ -62,13 +62,16 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
             <h5> Share Your Story :</h5>
             <textarea
               placeholder="Share your story"
-              value={postText}
-              className="form-input col-12 col-md-9"
+              name="post"
+              type="post"
+              id="post"
+              value={postText.post}
               onChange={handleChange}
-        ></textarea>
+            ></textarea>
          
           <button className='btn' type='submit'> Submit Post</button>
           </form>
+
           {error && <div>Post failed</div>}
           </div>
         </div>

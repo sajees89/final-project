@@ -14,7 +14,7 @@ function Home() {
 
   const loggedIn = Auth.loggedIn();
   return (
-    <div className='home-title'>Home
+    <div className='home-title'>
       <div className='home-title-wrapper'>
         <h1 className='glow'>UFT</h1>
         <p>Every Little Good Deed Counts</p>

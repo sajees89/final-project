@@ -1,13 +1,15 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
 
-import Commentlist from '../components/Commentlist';
-import Commentform from '../components/Commentform';
-import '../index.css';
+import "../index.css";
+import Auth from "../utils/auth";
+import { QUERY_POST } from "../utils/queries";
 
-import Auth from '../utils/auth';
-import { useQuery } from '@apollo/client';
-import { QUERY_POST } from '../utils/queries';
+import Commentlist from "../components/Commentlist";
+import Commentform from "../components/Commentform";
+
+
 
 const SinglePost = () => {
   const { id: postId } = useParams();
@@ -24,34 +26,28 @@ const SinglePost = () => {
 
   return (
     <div>
-<div class="card">
-  {/* <img src="..." class="card-img-top" alt="..."> */}
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    
-  </div>
-</div>
-
-
-
-
-      <div className="card mb-3">
-        <p className="card-header">
-          <span style={{ fontWeight: 700 }} className="text-light">
-            {post.username}
-          </span>{' '}
-          post on {post.createdAt}
-        </p>
-        <div className="card-body">
-          <p>{post.postText}</p>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            {/* <img src="..." class="card-img" alt="..."> */}
+          </div>
+          <div class="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title">
+                <span style={{ fontWeight: 700 }} className="text-light">
+                  {post.username}
+                </span>
+              </h5>
+              <p className="card-text">{post.postText}</p>
+              <p className="card-text">
+                <small class="text-muted">{post.createdAt}</small>
+              </p>
+            </div>
+          </div>
         </div>
-       
       </div>
 
-      {post.commentCount > 0 && (
-        <Commentlist comments={post.comments} />
-      )}
+      {post.commentCount > 0 && <Commentlist comments={post.comments} />}
 
       {Auth.loggedIn() && <Commentform postId={post._id} />}
     </div>
