@@ -17,6 +17,15 @@ type Post {
   postText: String!
   username: String!
   createdAt: String!
+  starCount: Int!
+  stars: [Star]
+}
+
+type Star {
+  _id: ID
+  starBody: String!
+  createdAt: String!
+  username: String!
 }
 
 type Auth {
@@ -35,7 +44,7 @@ type Mutation {
   login(username: String!, password: String!): Auth
   addUser(username: String!, email: String!, password: String!): Auth
   addPost(postText: String!): Post
-}
+  addStar(postId: ID!, starBody: String!): Post
 `;
 
 // export the typeDefs
