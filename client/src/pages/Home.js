@@ -68,12 +68,12 @@ function Home() {
           </p>
           {/* <hr className="bubblehr"></hr> */}
           <div className="post_info">
-            <span className="author">Posted by Lone Starr</span>
-            <div className="date">March 20,2022</div>
+            {/* <span className="author">Posted by Lone Starr</span> */}
+            {/* <div className="date">March 20,2022</div> */}
           </div>
           <div className="post_comments">
-            <div className="number">12</div>
-            <div className="comments">High Fives</div>
+            {/* <div className="number">12</div> */}
+            {/* <div className="comments">High Fives</div> */}
           </div>
         </div>
         <div className="bubble2 bubble-bottom-left"></div>
@@ -90,9 +90,9 @@ function Home() {
             </p>
             {/* <hr className="bubblehr"></hr> */}
             <div className="post_info">
-              <span className="author">Posted by Spock</span>
+              {/* <span className="author">Posted by Spock</span> */}
             </div>
-            <div className="date">January 18, 2022</div>
+            {/* <div className="date">January 18, 2022</div> */}
 
             <div className="post_comments">
               {/* <div className="number">25</div> */}

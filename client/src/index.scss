@@ -205,11 +205,9 @@ form input {
 }
 
 /* homepage */
-// .home-title {
-//   padding-top: 30px;
-//   color: #f2f2f2;
-//   text-align: center;
-// }
+.home-title {
+  margin-top: -3vh;
+}
 
 .hr1 {
   display: block;
@@ -279,7 +277,7 @@ form input {
 
 .subtitle3 {
   font-size: 8vw;
-  margin-top: -4.5vh;
+  margin-top: -3.75vh;
   //   animation-delay: 0s;
 }
 
@@ -301,11 +299,11 @@ form input {
 
 /* Footer Page Start */
 .footer {
-  //   background-image: url("../public/assets/images/handsnhearts.jpeg");
-  //   background-size: 520px;
-  //   height: 15%;
+  // background-image: url("../public/assets/images/handsnhearts.jpeg");
+  // background-size: 520px;
+  // height: 15%;
   text-align: left;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 15px;
   width: 100%;
@@ -322,38 +320,6 @@ form input {
 /* Footer Page End */
 
 /* Home Page Post Bubbles Start */
-// .bubble1 {
-//   position: absolute;
-//   top: 50%;
-//   left: 20%;
-//   transform: translate(-50%, 50%);
-//   width: 200px;
-//   height: 500px;
-//   border-radius: 90% 100% 90% 100% / 100% 50% 100% 50%;
-//   background: #fff;
-//   transform: rotate(90deg);
-// }
-
-// .bubble2 {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, 50%);
-//   background-size: 200px 200px;
-//   border-radius: 80% 20% 32% 68% / 58% 22% 78%;
-//   background: #fff;
-// }
-
-// .bubble3 {
-//   position: absolute;
-//   top: 50%;
-//   left: 75%;
-//   transform: translate(-50%, 50%);
-//   background-size: 200px 200px;
-//   border-radius: 80% 20% 32% 68% / 58% 22% 78%;
-//   background: #fff;
-//   transform: rotate(90deg);
-// }
 
 // .bubble-bottom-left:before {
 //   content: "";
@@ -380,23 +346,6 @@ form input {
 //   border-bottom: 20px solid transparent;
 //   left: 215px;
 //   bottom: -24px;
-// }
-
-// .bubble {
-//   position: relative;
-//   float: left;
-//   margin-left: 50px;
-//   font-family: ainslie-sans, sans-serif;
-//   font-weight: 400;
-//   font-style: normal;
-//   font-size: 18px;
-//   line-height: 24px;
-//   width: 300px;
-//   background: #fff;
-//   border-radius: 50px;
-//   padding: 24px;
-//   text-align: center;
-//   color: #000;
 // }
 
 .post_title1 {
@@ -456,19 +405,18 @@ form input {
   border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
 }
 
-.bubble-bottom-left:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 24px solid #d8eaf1;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #d8eaf1;
-  //   margin-top: 20vw;
-  margin-left: 20vw;
-  bottom: 45px;
-  transform: rotate(150deg);
-}
+// .bubble-bottom-left:before {
+//   content: "";
+//   width: 0px;
+//   height: 0px;
+//   position: absolute;
+//   border-left: 24px solid #d8eaf1;
+//   border-right: 12px solid transparent;
+//   border-top: 12px solid #d8eaf1;
+//   margin-left: 20vw;
+//   bottom: 45px;
+//   transform: rotate(150deg);
+// }
 
 .details2 {
   font-family: collector-comic, sans-serif;
@@ -582,7 +530,6 @@ form input {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.5vw;
-  margin-top: 100px;
   margin-bottom: 10px;
   text-align: center;
   color: #fffb00;
@@ -600,7 +547,8 @@ form input {
   text-align: center;
   color: #000;
   background-color: #23a2f6;
-  width: 70vh;
+  // background-size: 40vh;
+  width: 60vh;
   margin: auto;
 }
 
@@ -621,7 +569,6 @@ nav a:hover {
   font-family: source-code-pro, monospace;
   font-weight: 700;
   font-size: 17px;
-  //   margin-top: 5px;
   width: 75px;
   height: 40px;
   border: none;
@@ -699,11 +646,6 @@ nav a:hover:after {
   100% {
     background-position: 0 0;
   }
-}
-
-.logo {
-  margin-top: -20px;
-  margin-left: 30px;
 }
 
 .logo {
