@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Logo from "./client/public/";
+import Logo from "../../assets/images/uft.svg";
 
 import Auth from "../../utils/auth";
+
+console.log(Logo);
 
 const Header = () => {
   const logout = (event) => {
@@ -12,21 +14,17 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header-title">
-        {/* <Link>
-          <a href="/" className="header h1">
-            <h1>
-              UFT
-              <img
-                src={Logo}
-                className="logo"
-                style={{ width: "8%" }}
-                alt="UFT Logo"
-              />
-            </h1>
-          </a>
-        </Link> */}
-
+      <div>
+        <a href="/">
+          <img
+            className="logo"
+            src={Logo}
+            width={150}
+            height={150}
+            alt="UFT Logo"
+          />
+        </a>
+        ;
         <nav className="nav">
           {Auth.loggedIn() ? (
             <>
