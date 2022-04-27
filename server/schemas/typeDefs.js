@@ -34,6 +34,7 @@ type Auth {
 }
 
 type Query {
+  me: User
   users: [User]
   user(username: String!): User
   posts(username: String): [Post]
@@ -45,6 +46,7 @@ type Mutation {
   addUser(username: String!, email: String!, password: String!): Auth
   addPost(postText: String!): Post
   addStar(postId: ID!, starBody: String!): Post
+  deletePost(postId: ID!): Post
 }
 `;
 

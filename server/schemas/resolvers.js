@@ -4,6 +4,19 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
+     me: async (parent, args, context) => {
+        if (context.user) {
+            const userData = await User.findOne({ _id: context.user._id })
+            .select('-__v -password')
+            .populate('posts')
+            .populate('stars');
+      
+            return userData;
+        }
+      
+         throw new AuthenticationError('Not logged in');
+        },
+
       users: async () => {
         return User.find()
           .select('-__v -password')
@@ -73,35 +86,24 @@ const resolvers = {
         }
   
         throw new AuthenticationError('You need to be logged in!');
+       },
+        deletePost: async (parent, { postId }, context) => {
+          if (context.user) {
+            const post = await Post.findOneAndDelete({ _id: postId });
+  
+            await User.findByIdAndUpdate(
+              { _id: context.user._id },
+              { $pull: { posts: postId } },
+              { new: true }
+            );
+  
+            return post;
           }
+  
+          throw new AuthenticationError('You need to be logged in!');
+        }  
     }
 };
 
-  module.exports = resolvers;
+module.exports = resolvers;
   
-        //   addComment: async (parent, { postId, commentBody }, context) => {
-        //     if (context.user) {
-        //       const updatedPost = await Post.findOneAndUpdate(
-        //         { _id: postId },
-        //         { $push: { reactions: { commentBody, username: context.user.username } } },
-        //         { new: true, runValidators: true }
-        //       );
-      
-        //       return updatedPost;
-        //     }
-      
-        //     throw new AuthenticationError('You need to be logged in!');
-        //   },
-        //   likePost: async (parent, { likeId }, context) => {
-        //     if (context.user) {
-        //       const updatedUser = await User.findOneAndUpdate(
-        //         { _id: context.user._id },
-        //         { $addToSet: { likes: likeId } },
-        //         { new: true }
-        //       ).populate('likes');
-      
-        //       return updatedUser;
-        //     }
-      
-        //     throw new AuthenticationError('You need to be logged in!');
-        //   }

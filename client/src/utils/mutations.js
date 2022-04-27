@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import gql from "graphql-tag";
 
 export const LOGIN_USER = gql`
   mutation login($username: String!, $password: String!) {
@@ -38,6 +38,12 @@ export const ADD_POST = gql`
          _id
        }
     }
+  }
+`;
+
+export const DELETE_POST_MUTATION = gql`
+  mutation deletePost($postId: ID!) {
+    deletePost(postId: $postId)
   }
 `;
 
