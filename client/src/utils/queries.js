@@ -19,12 +19,12 @@ export const QUERY_POST = gql`
       postText
       createdAt
       username
-      commentCount
-      commentss {
+      starCount
+      stars {
         _id
         createdAt
         username
-        commentBody
+        starBody
       }
     }
   }
@@ -40,7 +40,7 @@ export const QUERY_USER = gql`
         _id
         postText
         createdAt
-        commentCount
+        starCount
       }
     }
   }
@@ -56,17 +56,12 @@ export const QUERY_ME = gql`
         _id
         postText
         createdAt
-        commentCount
-        comments {
+        starCount
+        stars {
           _id
           createdAt
-          commentBody
+          starBody
           username
-        }
-        likes {
-            _id 
-            createdAt
-            username
         }
       }
     }

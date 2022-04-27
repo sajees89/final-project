@@ -6,26 +6,26 @@ const typeDefs = gql`
 
 type User {
   _id: ID!
-  username: String!
-  email: String!
-  password: String!
+  username: String
+  email: String
+  password: String
   posts: [Post]
 }
 
 type Post {
   _id: ID
-  postText: String!
-  username: String!
-  createdAt: String!
-  starCount: Int!
+  postText: String
+  username: String
+  createdAt: String
+  starCount: Int
   stars: [Star]
 }
 
 type Star {
   _id: ID
-  starBody: String!
-  createdAt: String!
-  username: String!
+  starBody: String
+  createdAt: String
+  username: String
 }
 
 type Auth {
@@ -45,6 +45,7 @@ type Mutation {
   addUser(username: String!, email: String!, password: String!): Auth
   addPost(postText: String!): Post
   addStar(postId: ID!, starBody: String!): Post
+}
 `;
 
 // export the typeDefs

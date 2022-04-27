@@ -64,7 +64,7 @@ const resolvers = {
       addStar: async (parent, { postId, starBody }, context) => {
         if (context.user) {
           const updatedPost = await Post.findOneAndUpdate(
-            { _id: posttId },
+            { _id: postId },
             { $push: { stars: { starBody, username: context.user.username } } },
             { new: true, runValidators: true }
           );
@@ -73,7 +73,7 @@ const resolvers = {
         }
   
         throw new AuthenticationError('You need to be logged in!');
-     }
+          }
     }
 };
 

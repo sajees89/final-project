@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import { gql } from '@apollo/client';
 
 export const LOGIN_USER = gql`
   mutation login($username: String!, $password: String!) {
@@ -33,25 +33,11 @@ export const ADD_POST = gql`
       _id
       postText
       username
-      commentCount
-       comments {
+      starCount
+       stars {
          _id
        }
     }
   }
 `;
 
-export const ADD_COMMENT = gql`
-  mutation addComment($postId: ID!, $commentBody: String!) {
-    addComment(postId: $postId, commentBody: $commentBody) {
-      _id
-      commentCount
-      comments {
-        _id
-        commentBody
-        createdAt
-        username
-      }
-    }
-  }
-`;
