@@ -1,9 +1,8 @@
 import React from 'react';
-import '../index.css';
 import { useState} from "react";
 import { useMutation } from '@apollo/client';
-import { ADD_POST} from '../utils/mutations';
-import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
+import { ADD_POST} from '../../utils/mutations';
+import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
 
   const Postform = () => {
     const [postText, setText] = useState('');
