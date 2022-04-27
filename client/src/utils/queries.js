@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_POSTS = gql`
   query posts($username: String) {
@@ -7,7 +7,6 @@ export const QUERY_POSTS = gql`
       postText
       createdAt
       username
-    
     }
   }
 `;
@@ -74,6 +73,7 @@ export const QUERY_ME_BASIC = gql`
       _id
       username
       email
+      starscount
     }
   }
 `;

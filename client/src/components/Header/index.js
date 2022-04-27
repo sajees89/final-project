@@ -1,22 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/images/uft.svg";
 
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 
+console.log(Logo);
 
 const Header = () => {
-  const logout = event => {
+  const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
 
   return (
     <header className="header">
-      <div className="header-title">
-        <Link to="/">
-         
-        </Link>
-
+      <div>
+        <a href="/">
+          <img
+            className="logo"
+            src={Logo}
+            width={150}
+            height={150}
+            alt="UFT Logo"
+          />
+        </a>
+        ;
         <nav className="nav">
           {Auth.loggedIn() ? (
             <>
@@ -27,8 +35,11 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">SignUp</Link>
+              <Link to="/login">Why?</Link>
+              <Link to="/login">Win!</Link>
+              <Link to="/signup">Join</Link>
+              <Link to="/login">Read</Link>
+              <Link to="/login">Post</Link>
               <Link to="/">Home</Link>
             </>
           )}

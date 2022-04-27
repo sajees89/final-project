@@ -2,14 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import "../index.css";
+import "../index.scss";
 // import Auth from "../utils/auth";
 import { QUERY_POST } from "../utils/queries";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import Commentlist from "../components/Commentlist";
 // import Commentform from "../components/Commentform";
-// const element =  <FontAwesomeIcon icon="fa-solid fa-circle-trash" />
-
 
 const SinglePost = () => {
   const { id: postId } = useParams();
@@ -49,7 +47,7 @@ const SinglePost = () => {
           </div>
         </div>
       </div>
-{/* 
+      {/* 
       {post.commentCount > 0 && <Commentlist comments={post.comments} />}
 
       {Auth.loggedIn() && <Commentform postId={post._id} />} */}
