@@ -41,16 +41,15 @@ const Profile = (props) => {
 
   return (
     <div>
-      <div className="flex-row mb-3">
-        <h2 className="bg-dark text-secondary p-3 display-inline-block">
+      <div className="profile-header">
+        <h2 className="profile-title">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
-
   
       </div>
 
-      <div className="flex-row justify-space-between mb-3">
-        <div className="col-12 mb-3 col-lg-8">
+      <div className="profile-container">
+        <div className="profile-post">
           <Postlist
             posts={user.posts}
             title={`${user.username}'s posts...`}

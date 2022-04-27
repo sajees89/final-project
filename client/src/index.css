@@ -257,5 +257,24 @@ width:100%;
     height: 200px;
 }
 .p-listing {
+  padding-top: 20px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
+/* card */
+.card {
+  padding: auto;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #23a2f6;
+}
+/* profile */
+.profile-header {
+  color: white
+}
+.singlepost-container {
   color: white;
 }
