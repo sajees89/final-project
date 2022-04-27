@@ -34,6 +34,7 @@ type Auth {
 }
 
 type Query {
+  me: User
   users: [User]
   user(username: String!): User
   posts(username: String): [Post]
