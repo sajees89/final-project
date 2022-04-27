@@ -5,10 +5,10 @@ import { useQuery } from "@apollo/client";
 import "../index.css";
 // import Auth from "../utils/auth";
 import { QUERY_POST } from "../utils/queries";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import Commentlist from "../components/Commentlist";
 // import Commentform from "../components/Commentform";
-
+// const element =  <FontAwesomeIcon icon="fa-solid fa-circle-trash" />
 
 
 const SinglePost = () => {
@@ -42,6 +42,9 @@ const SinglePost = () => {
               <p className="card-text">
                 <small class="text-muted">{post.createdAt}</small>
               </p>
+              <div>
+              <FontAwesomeIcon icon="fa-solid fa-circle-trash" />
+              </div>
             </div>
           </div>
         </div>

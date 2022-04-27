@@ -25,10 +25,7 @@ const Postlist = ({ posts }) => {
             <div className="card-body">
               <Link to={`/post/${post._id}`}>
                 <p>{post.postText}</p>
-                <p className="mb-0">
-                  Reactions: {post.reactionCount} || Click to{" "}
-                  {post.reactionCount ? "see" : "start"} the discussion!
-                </p>
+                
               </Link>
             </div>
           </div>

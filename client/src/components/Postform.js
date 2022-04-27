@@ -14,7 +14,7 @@ import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
           try {
             // update post array's cache
             // could potentially not exist yet, so wrap in a try/catch
-            const { posts } = cache.readQuery({ query: QUERY_POSTS});
+            const { posts } = cache.readQuery({ query: QUERY_POSTS });
             cache.writeQuery({
               query: QUERY_POSTS,
               data: { posts: [addPost, ...posts] },
