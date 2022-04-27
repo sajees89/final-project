@@ -265,6 +265,7 @@ form input {
     #800e0b 91%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-stroke: 4px transparent;
   color: #08070f;
   animation: glow 5s ease-in-out infinite;
@@ -547,8 +548,8 @@ form input {
   text-align: center;
   color: #000;
   background-color: #23a2f6;
-  // background-size: 40vh;
-  width: 60vh;
+  background-size: 70vh;
+  width: 68vh;
   margin: auto;
 }
 

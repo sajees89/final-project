@@ -28,18 +28,19 @@ const Header = () => {
         <nav className="nav">
           {Auth.loggedIn() ? (
             <>
-              <Link to="/profile">Me</Link>
               <a href="/" onClick={logout}>
-                Logout
+                Exit
               </a>
+              <Link to="/profile">User</Link>
+              <Link to="/profile">Post</Link>
             </>
           ) : (
             <>
-              <Link to="/login">Why?</Link>
-              <Link to="/login">Win!</Link>
+              <Link to="/">Why?</Link>
+              <Link to="/">Win!</Link>
               <Link to="/signup">Join</Link>
-              <Link to="/login">Read</Link>
               <Link to="/login">Post</Link>
+              <Link to="/">Read</Link>
               <Link to="/">Home</Link>
             </>
           )}
