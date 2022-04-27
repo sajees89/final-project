@@ -2,13 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import "../index.css";
-import Auth from "../utils/auth";
+import "../index.scss";
+// import Auth from "../utils/auth";
 import { QUERY_POST } from "../utils/queries";
 
-import Likebutton from "../components/Likebutton";
-
-
+// import Commentlist from "../components/Commentlist";
+// import Commentform from "../components/Commentform";
 
 const SinglePost = () => {
   const { id: postId } = useParams();
@@ -24,10 +23,12 @@ const SinglePost = () => {
   }
 
   return (
-    <div className="singlepost-container">
-      <div class="card">
+    <div>
+      <div class="card mb-3">
         <div class="row no-gutters">
-         
+          <div class="col-md-4">
+            {/* <img src="..." class="card-img" alt="..."> */}
+          </div>
           <div class="col-md-8">
             <div className="card-body">
               <h5 className="card-title">
@@ -43,10 +44,10 @@ const SinglePost = () => {
           </div>
         </div>
       </div>
+      {/* 
+      {post.commentCount > 0 && <Commentlist comments={post.comments} />}
 
-      {post.likeCount > 0 && <Likebutton likes={post.likes} />}
-
-      {Auth.loggedIn() && <Likebutton postId={post._id} />}
+      {Auth.loggedIn() && <Commentform postId={post._id} />} */}
     </div>
   );
 };
