@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+// import Logo from "./client/public/";
 
-import Auth from '../../utils/auth';
-
+import Auth from "../../utils/auth";
 
 const Header = () => {
-  const logout = event => {
+  const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
@@ -13,9 +13,19 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-title">
-        <Link to="/">
-         
-        </Link>
+        {/* <Link>
+          <a href="/" className="header h1">
+            <h1>
+              UFT
+              <img
+                src={Logo}
+                className="logo"
+                style={{ width: "8%" }}
+                alt="UFT Logo"
+              />
+            </h1>
+          </a>
+        </Link> */}
 
         <nav className="nav">
           {Auth.loggedIn() ? (
@@ -27,8 +37,11 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">SignUp</Link>
+              <Link to="/login">Why?</Link>
+              <Link to="/login">Win!</Link>
+              <Link to="/signup">Join</Link>
+              <Link to="/login">Read</Link>
+              <Link to="/login">Post</Link>
               <Link to="/">Home</Link>
             </>
           )}
