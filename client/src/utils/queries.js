@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 export const QUERY_POSTS = gql`
   query posts($username: String) {
@@ -74,6 +74,7 @@ export const QUERY_ME_BASIC = gql`
       _id
       username
       email
+      starscount
     }
   }
 `;
