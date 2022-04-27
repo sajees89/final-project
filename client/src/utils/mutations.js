@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import { gql } from "@apollo/client";
 
 export const LOGIN_USER = gql`
   mutation login($username: String!, $password: String!) {
@@ -34,9 +34,9 @@ export const ADD_POST = gql`
       postText
       username
       starCount
-       stars {
-         _id
-       }
+      stars {
+        _id
+      }
     }
   }
 `;
@@ -46,4 +46,3 @@ export const DELETE_POST_MUTATION = gql`
     deletePost(postId: $postId)
   }
 `;
-
