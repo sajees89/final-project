@@ -45,6 +45,7 @@ type Mutation {
   addUser(username: String!, email: String!, password: String!): Auth
   addPost(postText: String!): Post
   addStar(postId: ID!, starBody: String!): Post
+  deletePost(postId: ID!): Post
 }
 `;
 
