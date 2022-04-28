@@ -298,28 +298,6 @@ form input {
   }
 }
 
-/* Footer Page Start */
-.footer {
-  // background-image: url("../public/assets/images/handsnhearts.jpeg");
-  // background-size: 520px;
-  // height: 15%;
-  text-align: left;
-  position: fixed;
-  bottom: 10px;
-  left: 15px;
-  width: 100%;
-  color: #e5e5e5;
-  font-family: source-code-pro, monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 10pt;
-}
-.footer img {
-  width: 200px;
-  height: 200px;
-}
-/* Footer Page End */
-
 /* Home Page Post Bubbles Start */
 
 // .bubble-bottom-left:before {
@@ -389,70 +367,76 @@ form input {
 
 .details1 {
   font-family: collector-comic, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  font-size: 15px;
-  line-height: 23px;
-  padding: 45px;
-  width: 350px;
-  height: 200px;
+  font-size: 1.75vh;
+  line-height: 2.25vh;
+  padding: 5vh;
+  width: 40vh;
+  height: 22vh;
   text-align: center;
   color: #010106;
   text-decoration: none;
-  margin-left: 13vw;
+  margin-left: 10vw;
   margin-top: 1vw;
-  background: #d8eaf1;
+  background: #fff;
   background-size: 300px 300px;
   border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+  filter: drop-shadow(20px 12px 0px #08070f);
 }
 
 // .bubble-bottom-left:before {
 //   content: "";
+//   position: absolute;
 //   width: 0px;
 //   height: 0px;
 //   position: absolute;
-//   border-left: 24px solid #d8eaf1;
+//   border-left: 24px solid #fff;
 //   border-right: 12px solid transparent;
-//   border-top: 12px solid #d8eaf1;
-//   margin-left: 20vw;
+//   border-top: 12px solid #fff;
+//   margin-left: 25vh;
+//   top: 70vh;
 //   bottom: 45px;
 //   transform: rotate(150deg);
 // }
 
 .details2 {
   font-family: collector-comic, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  font-size: 15px;
-  line-height: 23px;
-  padding: 60px;
-  width: 500px;
-  height: 300px;
+  font-size: 1.75vh;
+  line-height: 2.25vh;
+  padding: 6.95vh;
+  width: 50vh;
+  height: 38vh;
   text-align: center;
   color: #010106;
   text-decoration: none;
   margin-left: 35vw;
-  margin-top: -13vw;
-  background: #feebd0;
+  margin-top: -16vw;
+  background: #fff;
   border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+  filter: drop-shadow(20px 12px 0px #08070f);
 }
 
 .details3 {
+  position: relative;
   font-family: collector-comic, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  font-size: 15px;
-  line-height: 23px;
-  padding: 60px;
-  width: 380px;
-  height: 300px;
+  font-size: 1.75vh;
+  line-height: 2.25vh;
+  padding: 6.5vh;
+  width: 45vh;
+  height: 30vh;
   text-align: center;
   color: #010106;
   text-decoration: none;
   margin-left: 65vw;
-  margin-top: -25vw;
-  background: #f9eafe;
+  margin-top: -23vw;
+  background: #fff;
   border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+  filter: drop-shadow(20px 12px 0px #08070f);
 }
 
 .bubblehr {
@@ -548,9 +532,9 @@ form input {
   text-align: center;
   color: #000;
   background-color: #23a2f6;
-  background-size: 70vh;
-  width: 68vh;
+  width: 58vh;
   margin: auto;
+  // z-index: 9999;
 }
 
 .sightings {
@@ -653,3 +637,31 @@ nav a:hover:after {
   margin-top: -20px;
   margin-left: 30px;
 }
+
+/* Footer Page Start */
+.footer {
+  text-align: left;
+  position: fixed;
+  bottom: -20px;
+  width: 100vw;
+  font-family: source-code-pro, monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10pt;
+  z-index: -1;
+}
+.footer img {
+  width: 100vw;
+  z-index: -1;
+  // height: 200px;
+}
+
+.copyright {
+  position: fixed;
+  margin-left: 10px;
+  bottom: 0vw;
+  z-index: 1;
+  color: #fff;
+  background-color: #000;
+}
+/* Footer Page End */

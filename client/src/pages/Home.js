@@ -58,7 +58,7 @@ function Home() {
         {/* <!-- Bubble 2 --> */}
 
         <div className="post1">
-          <h2 className="post_title">Nonna's Meatballs</h2>
+          {/* <h2 className="post_title">Nonna's Meatballs</h2> */}
           <p className="details2">
             My Nonna and two of her friends in a seniors building needed help
             cleaning all of the windows in their apartments for springtime. I
@@ -81,12 +81,12 @@ function Home() {
         {/* <!-- Bubble 3 --> */}
         <div className="bubble3 bubble-bottom-right">
           <div className="post1">
-            <h2 className="post_title">41 Centimeters</h2>
+            {/* <h2 className="post_title">41 Centimeters</h2> */}
             <p className="details3">
               It was more snow than we all expected. I could have stayed inside
               nice and warm playing XBox, instead I got my gear and shoveled for
-              four hours clearing snow for a single mom down my street and
-              others who needed extra help.
+              three hours clearing snow for a single mom and others who needed
+              help.
             </p>
             {/* <hr className="bubblehr"></hr> */}
             <div className="post_info">
