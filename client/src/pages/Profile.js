@@ -10,16 +10,16 @@ import { QUERY_USER } from "../utils/queries";
 import Auth from "../utils/auth";
 
 const Profile = (props) => {
-  const { username: userParam } = useParams();
+  const { d: userId } = useParams();
 
   const { loading, data } = useQuery(QUERY_USER, {
-    variables: { username: userParam },
+    variables: { id: userId },
   });
 
-  const user = data?.me || data?.user || {};
+  const user = data?.user || [];
 
   // redirect to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+  if (Auth.loggedIn() && Auth.getProfile().data.userId === userId) {
     return <Navigate to="/profile" />;
   }
 
@@ -40,7 +40,7 @@ const Profile = (props) => {
     <div className="profile-container">
       <div className="flex-row mb-3">
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing {userParam ? `${user.username}'s` : "your"} profile.
+          Viewing {userId ? `${user.username}'s` : "your"} profile.
         </h2>
       </div>
 
@@ -49,7 +49,7 @@ const Profile = (props) => {
           <Postlist posts={user.posts} title={`${user.username}'s posts...`} />
         </div>
       </div>
-      <div className="mb-3">{!userParam && <Postform />}</div>
+      <div className="mb-3">{!userId && <Postform />}</div>
     </div>
   );
 };

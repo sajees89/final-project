@@ -53,7 +53,7 @@ function App() {
           <Route path="/read" element={<ReadAll />} />
           <Route path="/postdata" element={<Postdata />} />
           <Route path="/mypost" element={<Postform />} />
-          <Route path="/profile/:username?" element={<Profile />} />
+          <Route path="/profile/user/:id" element={<Profile />} />
           <Route path="/post/:id" element={<Singlepost />} />
           <Route path="*" element={<Nomatch />} />
         </Routes>
