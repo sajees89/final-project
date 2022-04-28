@@ -32,7 +32,7 @@ const Header = () => {
                 Exit
               </a>
               <Link to="/profile">User</Link>
-              <Link to="/profile">Post</Link>
+              <Link to="/mypost">Post</Link>
             </>
           ) : (
             <>
