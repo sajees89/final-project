@@ -53,4 +53,4 @@ const SinglePost = () => {
   );
 };
 
-export default SinglePost;
+export default SinglePost
