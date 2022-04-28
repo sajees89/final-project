@@ -36,4 +36,4 @@ const ReadAll = () => {
   );
 };
 
-export default ReadAll;
+export default ReadAll
