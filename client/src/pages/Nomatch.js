@@ -2,7 +2,7 @@ import React from 'react'
 
 function Nomatch() {
   return (
-    <div>Nomatch</div>
+    <div className='profile-container'>Nomatch</div>
   )
 }
 

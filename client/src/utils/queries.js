@@ -45,35 +45,3 @@ export const QUERY_USER = gql`
   }
 `;
 
-export const QUERY_ME = gql`
-  {
-    me {
-      _id
-      username
-      email
-      posts {
-        _id
-        postText
-        createdAt
-        starCount
-        stars {
-          _id
-          createdAt
-          starBody
-          username
-        }
-      }
-    }
-  }
-`;
-
-export const QUERY_ME_BASIC = gql`
-  {
-    me {
-      _id
-      username
-      email
-      starscount
-    }
-  }
-`;

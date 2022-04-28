@@ -18,6 +18,7 @@ import Nomatch from "./pages/Nomatch";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ReadAll from "./pages/ReadAll";
+import Postdata from "./pages/Postdata";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -48,6 +49,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/read" element={<ReadAll />} />
+          <Route path="/mypost" element={<Postdata />} />
           <Route path="/profile/:username?" element={<Profile />} />
           <Route path="/post/:id" element={<Singlepost />} />
           <Route path="*" element={<Nomatch />} />
