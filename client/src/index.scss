@@ -23,8 +23,8 @@ body {
   background-color: #080710;
 }
 .background {
-  width: 430px;
-  height: 520px;
+  // width: 430px;
+  // height: 520px;
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -36,17 +36,21 @@ body {
   position: absolute;
   border-radius: 50%;
 }
-.shape:first-child {
-  background: linear-gradient(#1845ad, #23a2f6);
-  left: -80px;
-  top: -65px;
-}
-.shape:last-child {
-  background: linear-gradient(to right, #ff512f, #f09819);
-  right: -40px;
-  bottom: -90px;
-}
+// .shape:first-child {
+//   background: linear-gradient(#1845ad, #23a2f6);
+//   left: -80px;
+//   top: -65px;
+// }
+// .shape:last-child {
+//   background: linear-gradient(to right, #ff512f, #f09819);
+//   right: -40px;
+//   bottom: -90px;
+// }
 form {
+  font-family: ainslie-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
   height: 400px;
   width: 400px;
   background-color: rgba(255, 255, 255, 0.13);
@@ -71,16 +75,23 @@ form * {
 }
 form h3 {
   font-size: 32px;
-  font-weight: 500;
+  font-family: ainslie-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
   line-height: 42px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 label {
   display: block;
-  margin-top: 30px;
-  font-size: 16px;
-  font-weight: 500;
+  margin-top: 50px;
+  font-size: 2vh;
+  font-family: source-code-pro, monospace;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
 }
 input {
   display: block;
@@ -90,23 +101,48 @@ input {
   border-radius: 3px;
   padding: 0 10px;
   margin-top: 8px;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 18px;
+  font-family: source-code-pro, monospace;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 ::placeholder {
-  color: #e5e5e5;
+  color: #fff;
 }
 button {
-  margin-top: 40px;
+  font-family: ainslie-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 20px;
   width: 100%;
-  background-color: #ffffff;
-  color: #080710;
+  background-color: #fffb00;
+  color: #08070f;
   padding: 10px 0;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+
   border-radius: 5px;
   cursor: pointer;
 }
+
+button a {
+  font-family: ainslie-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 40px;
+  width: 100%;
+  background-color: #23a2f6;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 20px;
+
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .signup-form {
   height: 500px;
 }
@@ -165,6 +201,7 @@ nav a {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+  color: #08070f;
 }
 
 .post-body input,
@@ -173,14 +210,26 @@ nav a {
   border: none;
   border-radius: 2px;
   padding: 5px;
+  font-family: source-code-pro, monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #08070f;
 }
 
 .post-body input {
   height: 40px;
+  font-family: source-code-pro, monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #08070f;
 }
 .post-body textarea {
   height: 150px;
-  width: 400px;
+  width: 325px;
+  font-family: source-code-pro, monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #08070f;
 }
 
 .post-container button {
@@ -195,6 +244,7 @@ input,
 textarea {
   margin-top: 5px;
   background-color: whitesmoke;
+  color: #08070f;
 }
 .post-container h1,
 label {
@@ -450,10 +500,9 @@ form input {
   font-style: normal;
   //   text-transform: uppercase;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 25px;
-  width: 250px;
-  margin-bottom: 20px;
+  font-size: 1.75vh;
+  width: 50vh;
+  margin-left: 18vw;
   text-align: center;
   color: #000;
   text-decoration: none;
@@ -526,7 +575,7 @@ form input {
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
@@ -647,7 +696,7 @@ nav a:hover:after {
   font-family: source-code-pro, monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 1vh;
+  font-size: 1.35vh;
   z-index: -1;
 }
 .footer img {

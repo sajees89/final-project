@@ -79,7 +79,7 @@ const Signup = () => {
         />
 
         <button className="btn" type="submit">
-          Sign Up
+          JOIN!
         </button>
       </form>
       {error && <div>Signup failed</div>}

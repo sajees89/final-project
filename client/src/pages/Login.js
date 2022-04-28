@@ -45,7 +45,7 @@ const Login = (props) => {
         <div className="shape"></div>
       </div>
       <form onSubmit={handleSubmit} className="login-form">
-        <h3>Login</h3>
+        <h3>Login to Post</h3>
         <h4>Username</h4>
         <input
           className="form-input"
@@ -69,7 +69,7 @@ const Login = (props) => {
         />
 
         <button className="btn" type="submit">
-          Log In
+          ENTER
         </button>
 
         {error && <div>Login failed</div>}
