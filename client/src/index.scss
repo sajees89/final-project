@@ -526,7 +526,7 @@ form input {
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 1.5vw;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
@@ -647,13 +647,12 @@ nav a:hover:after {
   font-family: source-code-pro, monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 10pt;
+  font-size: 1vh;
   z-index: -1;
 }
 .footer img {
   width: 100vw;
   z-index: -1;
-  // height: 200px;
 }
 
 .copyright {
