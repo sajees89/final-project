@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import "../index.scss";
-import Auth from "../utils/auth";
+//import Auth from "../utils/auth";
 import { QUERY_POST } from "../utils/queries";
 import Likebutton from "../components/Likebutton";
+import Deletebutton from "../components/Deletebutton"
 
-// import Commentlist from "../components/Commentlist";
-// import Commentform from "../components/Commentform";
+
 
 const SinglePost = () => {
   const { id: postId } = useParams();
@@ -24,11 +24,11 @@ const SinglePost = () => {
   }
 
   return (
-    <div>
+    <div className="single-post">
       <div class="card mb-3">
         <div class="row no-gutters">
           <div class="col-md-4">
-            {/* <img src="..." class="card-img" alt="..."> */}
+           
           </div>
           <div class="col-md-8">
             <div className="card-body">
@@ -41,14 +41,18 @@ const SinglePost = () => {
               <p className="card-text">
                 <small class="text-muted">{post.createdAt}</small>
               </p>
+              <div>
+                <Likebutton/>
+                <div>
+                <Deletebutton/>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {post.likeCount > 0}
-
-      {Auth.loggedIn() && <Likebutton postId={post._id} />}
+      
     </div>
   );
 };
