@@ -28,19 +28,19 @@ const Header = () => {
         <nav className="nav">
           {Auth.loggedIn() ? (
             <>
-              <Link to="/profile">Me</Link>
-              <Link to="/mypost">Post</Link>
               <a href="/" onClick={logout}>
-                Logout
+                Exit
               </a>
+              <Link to="/profile">User</Link>
+              <Link to="/mypost">Post</Link>
             </>
           ) : (
             <>
-              <Link to="/login">Why?</Link>
-              <Link to="/login">Win!</Link>
+              <Link to="/">Why?</Link>
+              <Link to="/">Win!</Link>
               <Link to="/signup">Join</Link>
+              <Link to="/login">Post</Link>
               <Link to="/read">Read</Link>
-              <Link to="/postdata">Post</Link>
               <Link to="/">Home</Link>
             </>
           )}
@@ -51,3 +51,4 @@ const Header = () => {
 };
 
 export default Header;
+
