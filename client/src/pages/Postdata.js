@@ -1,20 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { Link } from "react-router-dom";
-import Postform from '../components/Postform'
-import Auth from "../utils/auth";
-
-
 
 function Postdata() {
   return (
-    <div>
+    <div>To post a good deed you must sign in
+    
     <Link to="/login">Login</Link>
-    <Link to="/signup">SignUp</Link>
-
-    <div>
-    {Auth.loggedIn() && <Postform/>}
-    <Postform/>
-    </div>
+    <Link to="/signup">Sign up</Link>
+    
     </div>
   )
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_POST } from "../../utils/mutations";
 import { QUERY_POSTS } from "../../utils/queries";
+import "../../index.scss";
 
 const Postform = () => {
   const [postText, setText] = useState("");
