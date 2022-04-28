@@ -40,7 +40,7 @@ const Header = () => {
               <Link to="/">Win!</Link>
               <Link to="/signup">Join</Link>
               <Link to="/login">Post</Link>
-              <Link to="/">Read</Link>
+              <Link to="/read">Read</Link>
               <Link to="/">Home</Link>
             </>
           )}

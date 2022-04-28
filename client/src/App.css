@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+.p-listing {
+  padding: 20px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+}
+/* card */
+.card {
+  padding-top: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.profile-container {
+  color: bisque;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

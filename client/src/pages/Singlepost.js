@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import "../index.scss";
-// import Auth from "../utils/auth";
+import Auth from "../utils/auth";
 import { QUERY_POST } from "../utils/queries";
+import Likebutton from "../components/Likebutton";
 
 // import Commentlist from "../components/Commentlist";
 // import Commentform from "../components/Commentform";
@@ -44,10 +45,10 @@ const SinglePost = () => {
           </div>
         </div>
       </div>
-      {/* 
-      {post.commentCount > 0 && <Commentlist comments={post.comments} />}
 
-      {Auth.loggedIn() && <Commentform postId={post._id} />} */}
+      {post.likeCount > 0}
+
+      {Auth.loggedIn() && <Likebutton postId={post._id} />}
     </div>
   );
 };

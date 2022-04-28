@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Nomatch() {
-  return (
-    <div>Nomatch</div>
-  )
+  return <div className="profile-container">Nomatch</div>;
 }
 
-export default Nomatch
+export default Nomatch;
