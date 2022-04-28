@@ -637,6 +637,15 @@ body {
     top: 0;
     border-radius: 5px;
   }
+
+  .singlepost {
+    color: white;
+    background-color: #00ffd5;
+  }
+  .card-body {
+    color: white;
+    
+  }
   
   @keyframes glowing {
     0% {
@@ -654,4 +663,6 @@ body {
     margin-top: -20px;
     margin-left: 30px;
   }
+
+
   
