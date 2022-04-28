@@ -60,7 +60,7 @@ const Postform = () => {
             {error && <span className="ml-2">Something went wrong...</span>}
           </p>
           <form className="post-form" onSubmit={handleSubmit}>
-            <h4> Share Your Story :</h4>
+            <h3 className="form h3"> Share The Awesome!</h3>
             <textarea
               placeholder="Share your story"
               className="form-input"
@@ -68,7 +68,7 @@ const Postform = () => {
               onChange={handleChange}
             ></textarea>
 
-            <button className="btn" type="submit">
+            <button className="button" type="submit">
               {" "}
               Submit Post
             </button>

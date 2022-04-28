@@ -5,7 +5,7 @@ import Postform from "../components/Postform";
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_POSTS } from "../utils/queries";
-import '../App.css';
+import "../App.css";
 
 const ReadAll = () => {
   const { loading, data } = useQuery(QUERY_POSTS);
@@ -36,4 +36,4 @@ const ReadAll = () => {
   );
 };
 
-export default ReadAll
+export default ReadAll;
