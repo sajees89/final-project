@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/uft.svg";
+import { Navigate } from "react-router";
 
 import Auth from "../../utils/auth";
 
@@ -28,6 +29,7 @@ const Header = () => {
         <nav className="nav">
           {Auth.loggedIn() ? (
             <>
+              <Navigate to="/mypost" />
               <a href="/" onClick={logout}>
                 Exit
               </a>
@@ -51,4 +53,3 @@ const Header = () => {
 };
 
 export default Header;
-
