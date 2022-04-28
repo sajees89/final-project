@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import Postform from '../components/Postform'
 import Auth from "../utils/auth";
 
@@ -29,6 +30,16 @@ function Postdata() {
             </>
           )}
     </div>
+=======
+
+function Postdata() {
+  return (
+    <div>To post a good deed you must sign in
+    
+    <Link to="/login">Login</Link>
+    <Link to="/signup">Sign up</Link>
+    
+>>>>>>> irene
     </div>
   )
 }

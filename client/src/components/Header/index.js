@@ -29,6 +29,7 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">Me</Link>
+              <Link to="/mypost">Post</Link>
               <a href="/" onClick={logout}>
                 Logout
               </a>
@@ -39,7 +40,7 @@ const Header = () => {
               <Link to="/login">Win!</Link>
               <Link to="/signup">Join</Link>
               <Link to="/read">Read</Link>
-              <Link to="/mypost">Post</Link>
+              <Link to="/postdata">Post</Link>
               <Link to="/">Home</Link>
             </>
           )}
