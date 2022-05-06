@@ -37,16 +37,15 @@ function Home() {
         {/* <!-- Bubble 1 --> */}
         <div className="bubble1 bubble-bottom-left">
           <div className="post1">
-            {/* <h2 className="post_title1">Get that Garbage Outta Here</h2> */}
             <p className="details1">
               Picked up five big garbage bags full of litter along the Little
               River and at the playground next to it. 10% of it were Covid
               masks!
             </p>
-            {/* <hr className="bubblehr"></hr> */}
+            <hr className="bubblehr1"></hr>
             <div className="post_info">
-              {/* <span className="author">Posted by Eleven</span> */}
-              {/* <div className="date">Apr 25, 2022</div> */}
+              <p className="author1">Posted by Eleven</p>
+              <p className="date1">Apr 25, 2022</p>
             </div>
             <div className="post_comments">
               {/* <div className="number">9</div> */}
@@ -58,7 +57,6 @@ function Home() {
         {/* <!-- Bubble 2 --> */}
 
         <div className="post1">
-          {/* <h2 className="post_title">Nonna's Meatballs</h2> */}
           <p className="details2">
             My Nonna and two of her friends in a seniors building needed help
             cleaning all of the windows in their apartments for springtime. I
@@ -81,7 +79,6 @@ function Home() {
         {/* <!-- Bubble 3 --> */}
         <div className="bubble3 bubble-bottom-right">
           <div className="post1">
-            {/* <h2 className="post_title">41 Centimeters</h2> */}
             <p className="details3">
               It was more snow than we all expected. I could have stayed inside
               nice and warm playing XBox, instead I got my gear and shoveled for
