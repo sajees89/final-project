@@ -440,23 +440,22 @@ form input {
   width: 20vh;
   // margin-bottom: 15px;
   color: #002bff;
-  margin-left: 10vw;
-  margin-top: -4.25vh;
+  margin-left: 16.25vw;
+  margin-top: -4.5vw;
   z-index: 9999;
 }
 
 .author1 {
   position: absolute;
   font-family: source-code-pro, monospace;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.5vh;
-  width: 50vh;
-  margin-left: 12.5vh;
-  margin-top: -6.5vh;
-  text-align: center;
+  margin-left: 18vw;
+  margin-top: -4vw;
+  // text-align: center;
   color: #002bff;
   text-decoration: none;
   z-index: 9999;
@@ -465,13 +464,12 @@ form input {
 .date1 {
   position: absolute;
   font-family: source-code-pro, monospace;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 1.5vh;
-  width: 50vh;
   text-transform: uppercase;
-  margin-left: 12.5vh;
-  margin-top: -4.5vh;
+  margin-left: 19vw;
+  margin-top: -2.75vw;
   text-align: center;
   color: #002bff;
   z-index: 9999;
