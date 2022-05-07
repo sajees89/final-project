@@ -40,17 +40,14 @@ function Home() {
             <p className="details1">
               Picked up five big garbage bags full of litter along the Little
               River and at the playground next to it. 10% of it were Covid
-              masks!
+              masks.
             </p>
             <hr className="bubblehr1"></hr>
             <div className="post_info">
               <p className="author1">Posted by Eleven</p>
               <p className="date1">Apr 25, 2022</p>
             </div>
-            <div className="post_comments">
-              {/* <div className="number">9</div> */}
-              {/* <div className="comments">High Fives</div> */}
-            </div>
+            <p className="stars1"></p>
           </div>
         </div>
 
@@ -58,45 +55,39 @@ function Home() {
 
         <div className="post1">
           <p className="details2">
-            My Nonna and two of her friends in a seniors building needed help
-            cleaning all of the windows in their apartments for springtime. I
-            spent six hours making them spotless inside and out the old
-            fashioned way with vinegar and newspaper. They were so grateful,
-            they made me the best meatballs ever and other delicious food!
+            In a seniors building, I spent six hours making windows spotless
+            inside and out for springtime the old fashioned way, with vinegar
+            and newspaper for my grandparents and their friends apartments. They
+            were so grateful, they made me the best homeade food ever!
           </p>
-          {/* <hr className="bubblehr"></hr> */}
+          <hr className="bubblehr2"></hr>
           <div className="post_info">
-            {/* <span className="author">Posted by Lone Starr</span> */}
-            {/* <div className="date">March 20,2022</div> */}
+            <p className="author2">Posted by Lone Starr</p>
+            <p className="date2">March 20,2022</p>
           </div>
-          <div className="post_comments">
-            {/* <div className="number">12</div> */}
-            {/* <div className="comments">High Fives</div> */}
-          </div>
+          <p className="stars2"></p>
         </div>
-        <div className="bubble2 bubble-bottom-left"></div>
+        {/* <div className="bubble2 bubble-bottom-left"></div> */}
 
         {/* <!-- Bubble 3 --> */}
         <div className="bubble3 bubble-bottom-right">
           <div className="post1">
             <p className="details3">
               It was more snow than we all expected. I could have stayed inside
-              nice and warm playing XBox, instead I got my gear and shoveled for
-              three hours clearing snow for a single mom and others who needed
-              help.
+              nice and warm playing XBox, instead I got my gear and clearing
+              snow for three hours for a single mom and other neighbors.
             </p>
-            {/* <hr className="bubblehr"></hr> */}
+            <hr className="bubblehr3"></hr>
             <div className="post_info">
-              {/* <span className="author">Posted by Spock</span> */}
+              <p className="author3">Posted by Spock</p>
             </div>
-            {/* <div className="date">January 18, 2022</div> */}
-
-            <div className="post_comments">
-              {/* <div className="number">25</div> */}
-              {/* <div className="comments">High Fives</div> */}
-            </div>
+            <p className="date3">January 18, 2022</p>
+          </div>
+          <div className="post_comments">
+            <p className="stars3"></p>
           </div>
         </div>
+        {/* </div> */}
 
         {/* <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
           {loading ? (
