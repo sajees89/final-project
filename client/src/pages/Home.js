@@ -35,7 +35,7 @@ function Home() {
 
       <main className="bubblezone">
         {/* <!-- Bubble 1 --> */}
-        <div className="bubble1 bubble-bottom-left">
+        {/* <div className="bubble1 bubble-bottom-left">
           <div className="post1">
             <p className="details1">
               Picked up five big garbage bags full of litter along the Little
@@ -49,11 +49,11 @@ function Home() {
             </div>
             <p className="stars1"></p>
           </div>
-        </div>
+        </div> */}
 
         {/* <!-- Bubble 2 --> */}
 
-        <div className="post1">
+        {/* <div className="post1">
           <p className="details2">
             In a seniors building, I spent six hours making windows spotless
             inside and out for springtime the old fashioned way, with vinegar
@@ -66,11 +66,11 @@ function Home() {
             <p className="date2">March 20,2022</p>
           </div>
           <p className="stars2"></p>
-        </div>
+        </div> */}
         {/* <div className="bubble2 bubble-bottom-left"></div> */}
 
         {/* <!-- Bubble 3 --> */}
-        <div className="bubble3 bubble-bottom-right">
+        {/* <div className="bubble3 bubble-bottom-right">
           <div className="post1">
             <p className="details3">
               It was more snow than we all expected. I could have stayed inside
@@ -86,7 +86,7 @@ function Home() {
           <div className="post_comments">
             <p className="stars3"></p>
           </div>
-        </div>
+        </div> */}
         {/* </div> */}
 
         {/* <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>

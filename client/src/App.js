@@ -16,7 +16,8 @@ import Singlepost from "./pages/Singlepost";
 
 import Nomatch from "./pages/Nomatch";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+// import Header from "./components/Header";
+import Navbar from "./components/Header/Navbar";
 import ReadAll from "./pages/ReadAll";
 import Postdata from "./pages/Postdata";
 
@@ -43,7 +44,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Header />
+        {/* <Header /> */}
+        <div className="App">
+          <Navbar />
+          App
+        </div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
