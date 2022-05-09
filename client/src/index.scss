@@ -1,3 +1,7 @@
+html {
+  font-size: 20px;
+}
+
 body {
   margin: 0;
   font-family: ainslie-sans, sans-serif;
@@ -36,101 +40,99 @@ body {
   position: absolute;
   border-radius: 50%;
 }
-// .shape:first-child {
-//   background: linear-gradient(#1845ad, #23a2f6);
-//   left: -80px;
-//   top: -65px;
-// }
-// .shape:last-child {
-//   background: linear-gradient(to right, #ff512f, #f09819);
-//   right: -40px;
-//   bottom: -90px;
-// }
+
 form {
+  display: flex;
+  position: absolute;
   font-family: ainslie-sans, sans-serif;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  height: 400px;
-  width: 400px;
+  // height: auto;
+  width: 28vw;
   background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 25%;
   left: 50%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
+  padding: 40px 35px;
 }
 form * {
+  position: absolute;
   font-family: ainslie-sans, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #ffffff;
-  letter-spacing: 0.5px;
+  // letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
 form h3 {
-  font-size: 32px;
+  position: absolute;
+  font-size: 2vw;
   font-family: ainslie-sans, sans-serif;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  line-height: 42px;
+  line-height: 2vh;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 20vw;
 }
 
 label {
+  position: absolute;
   display: block;
-  margin-top: 50px;
-  font-size: 2vh;
+  margin-top: 50vw;
+  font-size: 2vw;
   font-family: source-code-pro, monospace;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
 }
 input {
+  position: absolute;
   display: block;
-  height: 50px;
-  width: 100%;
+  height: 40px;
+  width: 23.5vw;
   background-color: rgba(255, 255, 255, 0.07);
   border-radius: 3px;
   padding: 0 10px;
-  margin-top: 8px;
   font-size: 18px;
   font-family: source-code-pro, monospace;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 ::placeholder {
+  position: absolute;
   color: #fff;
 }
 button {
+  position: absolute;
   font-family: ainslie-sans, sans-serif;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
   margin-top: 20px;
-  width: 100%;
+  width: 23.5vw;
   background-color: #fffb00;
   color: #08070f;
-  padding: 10px 0;
+  padding: 10px 10px;
   font-size: 20px;
-
+  align-content: center;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button a {
-  font-family: ainslie-sans, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  // font-family: ainslie-sans, sans-serif;
+  // font-weight: 700;
+  // font-style: normal;
   text-transform: uppercase;
   margin-top: 40px;
   width: 100%;
@@ -144,7 +146,8 @@ button a {
 }
 
 .signup-form {
-  height: 500px;
+  display: flex;
+  height: auto;
 }
 
 nav {
@@ -169,6 +172,18 @@ nav a {
   padding: 9px 18px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.small-print {
+  position: absolute;
+  font-family: source-code-pro, monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1vh;
+  text-transform: uppercase;
+  padding-bottom: 5vw;
+  color: #fff;
+  z-index: 9999;
 }
 
 .create-post {
@@ -374,44 +389,6 @@ form input {
 //   bottom: -24px;
 // }
 
-.post_title1 {
-  font-family: ainslie-sans, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 23px;
-  line-height: 25px;
-  width: 250px;
-  margin-bottom: 10px;
-  margin-top: 300px;
-  margin-right: 500px;
-  text-align: center;
-  color: #000;
-  text-decoration: none;
-  transform: rotate(260deg);
-}
-
-.post_title {
-  font-family: ainslie-sans, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 23px;
-  line-height: 25px;
-  width: 250px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #000;
-  text-decoration: none;
-}
-
-.post_title a {
-  text-decoration: none;
-  color: #23a2f6;
-}
-
 .details1 {
   display: flex;
   font-family: collector-comic, sans-serif;
@@ -515,7 +492,7 @@ form input {
   border-bottom: 0.7em solid var(--star-color);
   border-left: 1em solid transparent;
   transform: rotate(35deg);
-  margin-left: 27vw;
+  margin-left: 26.5vw;
   margin-top: -2.75vw;
   z-index: 8888;
 }
@@ -560,7 +537,7 @@ form input {
   border-bottom: 0.7em solid var(--star-color);
   border-left: 1em solid transparent;
   transform: rotate(35deg);
-  margin-left: 27vw;
+  margin-left: 54.5vw;
   margin-top: -2.75vw;
   z-index: 8888;
 }
@@ -605,7 +582,7 @@ form input {
   border-bottom: 0.7em solid var(--star-color);
   border-left: 1em solid transparent;
   transform: rotate(35deg);
-  margin-left: 27vw;
+  margin-left: 85vw;
   margin-top: -2.75vw;
   z-index: 8888;
 }
@@ -783,7 +760,8 @@ form input {
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
   margin-bottom: 10px;
   text-align: center;
   color: #fffb00;
@@ -795,15 +773,14 @@ form input {
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.1vw;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 5px 15px;
   text-align: center;
   color: #000;
   background-color: #23a2f6;
-  width: 58vh;
+  width: auto;
   margin: auto;
-  // z-index: 9999;
 }
 
 .sightings {
@@ -938,6 +915,9 @@ nav a:hover:after {
 /* SCSS variables to store breakpoints */
 
 // Small tablets and large smartphones (landscape view)
+$screen-xs-min: 280px;
+
+// Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
 
 // Small tablets (portrait view)
@@ -949,10 +929,99 @@ $screen-lg-min: 992px;
 // Large tablets and desktops
 $screen-xl-min: 1200px;
 
+// Extra Small devices
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+    html {
+      font-size: 15px;
+    }
+    // .details1 {
+    //   display: flex;
+    //   font-family: collector-comic, sans-serif;
+    //   font-weight: 700;
+    //   font-style: normal;
+    //   font-size: 1.75vh;
+    //   line-height: 2.25vh;
+    //   padding: 5vh;
+    //   width: 40.5vh;
+    //   height: 25vh;
+    //   text-align: center;
+    //   color: #010106;
+    //   text-decoration: none;
+    //   margin-left: -10px;
+    //   align-items: center;
+    //   margin-top: 2vw;
+    //   background: #fff;
+    //   background-size: 300px 300px;
+    //   border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+    //   filter: drop-shadow(20px 12px 0px #08070f);
+    // }
+
+    // .bubblehr1 {
+    //   position: absolute;
+    //   border-style: solid;
+    //   border-width: 0.5px;
+    //   width: 20vh;
+    //   color: #002bff;
+    //   margin-left: 16.25vw;
+    //   margin-top: -4.75vw;
+    //   z-index: 9999;
+    // }
+
+    // .author1 {
+    //   position: absolute;
+    //   font-family: source-code-pro, monospace;
+    //   font-weight: 700;
+    //   font-style: normal;
+    //   text-transform: uppercase;
+    //   text-decoration: none;
+    //   font-size: 1.5vh;
+    //   margin-left: 18vw;
+    //   margin-top: -4vw;
+    //   color: #002bff;
+    //   text-decoration: none;
+    //   z-index: 9999;
+    // }
+
+    // .date1 {
+    //   position: absolute;
+    //   font-family: source-code-pro, monospace;
+    //   font-weight: 700;
+    //   font-style: normal;
+    //   font-size: 1.5vh;
+    //   text-transform: uppercase;
+    //   margin-left: 19vw;
+    //   margin-top: -2.75vw;
+    //   text-align: center;
+    //   color: #002bff;
+    //   z-index: 9999;
+    // }
+
+    // .number1 {
+    //   position: absolute;
+    //   font-family: source-code-pro, monospace;
+    //   font-weight: 700;
+    //   font-style: normal;
+    //   font-size: 2vh;
+    //   text-transform: uppercase;
+    //   margin-left: 15vw;
+    //   margin-top: -2.75vw;
+    //   text-align: center;
+    //   color: #002bff;
+    //   background: #fff;
+    //   z-index: 9999;
+    // }
+  }
+}
+
 // Small devices
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
     @content;
+    html {
+      font-size: 15px;
+    }
   }
 }
 
@@ -960,6 +1029,9 @@ $screen-xl-min: 1200px;
 @mixin md {
   @media (min-width: #{$screen-md-min}) {
     @content;
+    html {
+      font-size: 18px;
+    }
   }
 }
 
@@ -967,6 +1039,9 @@ $screen-xl-min: 1200px;
 @mixin lg {
   @media (min-width: #{$screen-lg-min}) {
     @content;
+    html {
+      font-size: 20px;
+    }
   }
 }
 
@@ -974,6 +1049,9 @@ $screen-xl-min: 1200px;
 @mixin xl {
   @media (min-width: #{$screen-xl-min}) {
     @content;
+    html {
+      font-size: 25px;
+    }
   }
 }
 

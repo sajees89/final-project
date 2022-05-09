@@ -40,14 +40,12 @@ const Signup = () => {
 
   return (
     <div>
-      <div className="background">
-        <div className="shape"></div>
-        <div className="shape"></div>
-      </div>
+      <div className="background"></div>
       <form onSubmit={handleFormSubmit} className="signup-form">
-        <h3>Sign Up Here</h3>
+        <h3>Teacher Sign Up</h3>
 
-        <h4>Username</h4>
+        <h4 className="form-heading">Username</h4>
+        <p className="small-print">Keep it Fun! Keep it Sci-Fi!</p>
         <input
           className="form-input"
           placeholder="Your username"
@@ -57,7 +55,23 @@ const Signup = () => {
           value={formState.username}
           onChange={handleChange}
         />
+        <h4>OCT Registration Number</h4>
+        <p className="small-print">
+          We will follow up with your principal to confirm.
+        </p>
+        <input
+          className="form-input"
+          placeholder="Your OCT Number"
+          name="oct"
+          type="oct"
+          id="oct"
+          value={formState.username}
+          onChange={handleChange}
+        />
         <h4>Email</h4>
+        <p className="small-print">
+          Our contact info and follow-up will be sent by email.
+        </p>
         <input
           className="form-input"
           placeholder="Your email"
